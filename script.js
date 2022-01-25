@@ -1,11 +1,29 @@
 // Assignment code here
-// Create password variable values
+// Function to generate password
 function generatePassword(){
+
+  // Create password variable values
   var character = '~!@#$%^&*()_+{}:?><;.,';
   var number = '1234567890';
   var alphabet = 'abcdefghijklmnopqrstuvwxyz';
   var caps = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
+
+  // Prompt for desired length
+  var length = prompt('Indicate a password length of 8 to 128 characters')
+
+  // Check that response meets requirements
+  if (length>=8 && length <=128) {
+    console.log(length)
+  }
+
+  // Return error if response does not meet requirements
+  else {
+    alert('You must enter a value greater than 7 and less than 129!')
+    return '';
+  }
 }
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
