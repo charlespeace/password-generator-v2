@@ -1,5 +1,11 @@
 // Assignment code here
-
+// Create password variable values
+function generatePassword(){
+  var character = '~!@#$%^&*()_+{}:?><;.,';
+  var number = '1234567890';
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  var caps = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
