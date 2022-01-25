@@ -5,8 +5,8 @@ function generatePassword(){
   // Create password variable values
   var character = '~!@#$%^&*()_+{}:?><;.,';
   var number = '1234567890';
-  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  var caps = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
+  var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+  var uppercase = 'ABCDEFGHIJKLMNOPRSTUVWXYZ';
 
   // Prompt for desired length
   var length = prompt('Indicate a password length of 8 to 128 characters')
@@ -16,10 +16,27 @@ function generatePassword(){
     console.log(length)
   }
 
-  // Return error if response does not meet requirements
+  // Return alert if response does not meet requirements
   else {
     alert('You must enter a value greater than 7 and less than 129!')
     return '';
+  }
+
+  // Prompt for lowercase letters
+  var ifLowercase = confirm('Include lowercase letters?')
+
+  // Prompt for uppercase letters
+  var ifUppercase = confirm('Include uppercase letters?')
+
+  // Prompt for numbers
+  var ifNumber = confirm('Include numbers?')
+  
+  // Prompt for special characters
+  var ifCharacter = confirm('Include special characters?')
+
+  // Return alert if no responses recorded
+  if (!ifLowercase && !ifUppercase && !ifNumber && !ifCharacter) {
+  return alert('You must chooose at least one type of character to be included!');
   }
 }
 
