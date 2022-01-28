@@ -1,4 +1,3 @@
-// Assignment code here
 // Function to generate password
 function generatePassword(){
 
@@ -40,11 +39,17 @@ function generatePassword(){
   return alert('You must chooose at least one type of character to be included!');
   }
 
-  // Randomly select characters based on user selections and add them to build result
+  // Use input to select characters from declared arrays and include selections in resulting password
   if (selectLowercase) {buildPassword += lowercase}
   if (selectUppercase) {buildPassword += uppercase}
   if (selectNumber) {buildPassword += number}
   if (selectSpecial) {buildPassword += special}
+
+  // Loop to iterate through the characters the user selects until the desired length is reached
+  for (let i = 0; i < length; i++){
+    generatePassword += buildPassword [Math.floor(Math.random () * buildPassword.length)];
+  }
+  return password;
 }
 
 // Get references to the #generate element
