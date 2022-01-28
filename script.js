@@ -7,6 +7,7 @@ function generatePassword(){
   var number = '1234567890';
   var special = '~!@#$%^&*()_+{}:?><;.,';
   var buildPassword = '';
+  var password = '';
 
   // Prompt for desired length
   var length = prompt('Indicate a password length of 8 to 128 characters')
@@ -47,7 +48,7 @@ function generatePassword(){
 
   // Loop to iterate through the characters the user selects until the desired length is reached
   for (let i = 0; i < length; i++){
-    generatePassword += buildPassword [Math.floor(Math.random () * buildPassword.length)];
+    password += buildPassword [Math.floor(Math.random () * buildPassword.length)];
   }
   return password;
 }
@@ -61,7 +62,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
