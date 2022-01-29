@@ -1,4 +1,4 @@
-# Password Generator (second submission)
+# Password Generator
 
 ## Purpose
 A website that will generate a random line of characters based on options selected by the user.

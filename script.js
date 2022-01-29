@@ -60,8 +60,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+  alert("Your new password is: " + password)
 }
 
 // Add event listener to generate button
